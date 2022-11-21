@@ -1,0 +1,31 @@
+@font-face {
+	font-family: "Maison Neue Thin";
+	src: url("../../fonts/MaisonNeue/MaisonNeue-Thin.otf");
+}
+
+#main-container {
+    background-color: #111111;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#countdown-container {
+    font-family: 'Maison Neue Thin';
+    font-size: 15vw;
+}
+
+.begin-button, .end-button, .save-button {
+    background: none;
+    border: 0px;
+    color: white;
+}
+
+#workday-begin-container, #workday-end-container {
+    font-family: 'Maison Neue Thin';
+    font-size: 3rem;
+    color: white;
+}
+
+.workday-begin-text, .workday-end-text {
+    font-size: 1.5rem;
+}

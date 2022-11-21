@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../imports/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/giorno.css">
+
+    <script src="../../imports/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../imports/jquery/countdown/jquery.countdown.min.js"></script>
+    <script src="../js/giorno.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="main-container" class="col-12 container-fluid overflow-hidden vh-100 vw-100 align-self-center">
+        <div class="col-12 row d-flex align-items-center justify-items-center m-0 p-0 text-center">
+            <div id="workday-begin-container" class="col text-white">
+                <div class="workday-begin-text row m-0 p-0 justify-content-center">
+                    Hora de entrada:
+                </div>
+                <div class="workday-begin-time row m-0 p-0 justify-content-center">
+
+                </div>
+            </div>
+            <div id="workday-end-container" class="col text-white">
+                <div class="workday-end-text row m-0 p-0 justify-content-center">
+                    Hora de salida:
+                </div>
+                <div class="workday-end-time row m-0 p-0 justify-content-center">
+
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex align-items-center justify-items-center m-0 p-0 w-100 text-center">
+            <div id="countdown-container" class="col-12 text-white w-100">
+                
+            </div>
+        </div>
+        <div id="control-buttons-container" class="row d-flex m-0 p-0 text-center">
+            <div class="col-12">
+                <button class="begin-button"><i class="bi bi-play-circle text-white" style="font-size: 3.5rem;"></i></button>
+                <button class="end-button"><i class="bi bi-pause-circle text-white" style="font-size: 3.5rem;"></i></button>
+                <button class="save-button"><i class="bi bi-stop-circle text-white" style="font-size: 3.5rem;"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

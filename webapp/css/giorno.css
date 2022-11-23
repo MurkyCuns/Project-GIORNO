@@ -12,9 +12,10 @@
 #countdown-container {
     font-family: 'Maison Neue Thin';
     font-size: 15vw;
+    color: white;
 }
 
-.begin-button, .end-button, .save-button {
+.begin-button, .resume-button, .pause-button, .end-button {
     background: none;
     border: 0px;
     color: white;

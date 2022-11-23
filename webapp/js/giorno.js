@@ -5,6 +5,13 @@ $(document).ready(function(){
     $(".workday-end-time").text("00:00");
 
     $('.begin-button').on('click', function(e){
+        e.preventDefault();
+        
+        $(this).addClass("d-none");
+        $(".resume-button").removeClass("d-none");
+        $(".pause-button").removeClass("d-none");
+        $(".end-button").removeClass("d-none");
+
         var currentDay = new Date();
         var currentDate = currentDay.getDate();
         var currentHour = currentDay.getHours();
@@ -36,12 +43,12 @@ $(document).ready(function(){
         weekday[6] = "Sábado";
     
         var weekdayName = weekday[currentDay.getDay()];
-    
+        
         var workdayDuration;
     
         if (monthsName == "Enero" || monthsName == "Febrero" || monthsName == "Marzo" || monthsName == "Abril" || monthsName == "Mayo" || monthsName == "Junio" || monthsName == "Octubre" || monthsName == "Noviembre" || monthsName == "Diciembre") {  
             
-            if (weekdayName == "Lunes" || weekdayName == "Martes" || weekdayName == "Miércoles" || weekdayName == "Jueves") {   
+            if (weekdayName == "Lunes" || weekdayName == "Martes" || weekdayName == "Miercoles" || weekdayName == "Jueves") {   
                 workdayDuration = 9;
             }  else if (weekdayName == "Domingo") {
                 workdayDuration = 7;
@@ -55,14 +62,15 @@ $(document).ready(function(){
                 workdayDuration = 7;
             } else {
                 workdayDuration = 9;
-            }
+        
+           }
             
         } else {
             workdayDuration = 7;
         }
-        
+
         var endWorkday = currentDay.setHours(currentDay.getHours() + workdayDuration);
-    
+        
         $('#countdown-container').countdown(endWorkday, function(event) {
             $(this).text(event.strftime('%H:%M:%S'));
         });
@@ -70,19 +78,29 @@ $(document).ready(function(){
         $(".workday-end-time").text("00:00");
         $(".workday-begin-time").text(currentHour + ":" + currentMinute);
 
-    });
-
-    $('.end-button').on('click', function(e){
-        var currentDay = new Date();
-        var currentDate = currentDay.getDate();
-        var currentHour = currentDay.getHours();
-        var currentMinute = (currentDay.getMinutes()<10?'0':'') + currentDay.getMinutes();
-
-        $('#countdown-container').countdown(currentDay, function(event) {
-            $(this).text(event.strftime('%H:%M:%S'));
+        $('.resume-button').on('click', function() {
+            var timedelta = new Date().getTime() - pauseDate.getTime();
+            resumedTime = new Date(currentDay.getTime() + workdayDuration + timedelta);
+            $('#countdown-container').css("color", "#FFF");
+            $('#countdown-container').countdown(resumedTime);
+            $('#countdown-container').countdown("start");
         });
 
-        $(".workday-end-time").text(currentHour + ":" + currentMinute);
+        $('.pause-button').on('click', function(e){
+            $('#countdown-container').countdown("stop");
+            $('#countdown-container').css("color", "#87CEEB");
+            pauseDate = new Date();
+        });
+
+        $('.end-button').on('click', function(e){
+            $('#countdown-container').css("color", "#FF0000");
+
+            $('#countdown-container').countdown("stop");
+            $('#countdown-container').text("00:00:00");
+    
+            $(".workday-end-time").text(currentHour + ":" + currentMinute);
+        });
+            
     });
 
 });

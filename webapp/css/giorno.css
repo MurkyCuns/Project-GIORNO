@@ -21,12 +21,16 @@
     color: white;
 }
 
-#workday-begin-container, #workday-end-container {
+#workday-begin-container, #workday-end-container, #workday-registered-container{
     font-family: 'Maison Neue Thin';
     font-size: 3rem;
     color: white;
 }
 
-.workday-begin-text, .workday-end-text {
+.workday-begin-text, .workday-end-text, .workday-registered-text {
     font-size: 1.5rem;
+}
+
+.disabled-button {
+    color: rgb(123, 123, 123) !important;
 }

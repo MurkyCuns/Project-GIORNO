@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../imports/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/giorno.css">
+
+    <script src="../../imports/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../imports/jquery/countdown/jquery.countdown.min.js"></script>
+    <script src="../js/signup.js"></script>
+
+    <title>Inicio de Sesión</title>
+</head>
+<body>
+    <main class="d-flex">
+        <div id="signup-quote-container" class="col-7 h-100 p-4" style="background-image: url('https://r4.wallpaperflare.com/wallpaper/557/597/119/hours-arrow-black-white-vintage-wallpaper-22016220cd468e0b8a685245f0c89952.jpg'); background-repeat: no-repeat; background-size: cover;">
+        </div>
+        <div id="signup-container" class="col-5 h-100 flex-column">
+            <div id="form-title">
+                Comienza a controlar tu tiempo
+            </div>
+            <div id="form-subtitle">
+                Utiliza la herramienta que te ayudará a conseguir tus metas
+            </div>
+            <form class="w-75">
+                <div class="form-row" style="display: flex; justify-content: space-between;">
+                    <div class="form-group" style="width: 100%; margin-right: .5rem;">
+                        <label for="exampleInputEmail1" class="mb-2">Nombre</label>
+                        <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Nombre">
+                    </div>
+                    <div class="form-group" style="width: 100%; margin-left: .5rem;">
+                        <label for="exampleInputEmail1" class="mb-2">Apellido/s</label>
+                        <input type="name" class="form-control" id="exampleInputSurname" aria-describedby="surnameHelp" placeholder="Apellido/s">
+                    </div>
+                </div>
+                <div class="form-group" style="width: 100%; margin-right: .5rem;">
+                    <label for="exampleInputEmail1" class="mt-4 mb-2">Usuario y Correo electrónico</label>
+                    <input type="name" class="form-control" id="exampleInputUsername" aria-describedby="usernameHelp" placeholder="Nombre de usuario">
+                    <input type="name" class="form-control mt-2" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Correo electrónico">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1" class="mt-4 mb-2">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Introducir contraseña">
+                  <input type="password" class="form-control mt-2" id="exampleInputPassword2" placeholder="Repite la contraseña">
+                </div>
+                <button type="submit" class="mt-4 btn btn-primary w-100">Crear una cuenta</button>
+              </form>
+              <div id="form-footer">
+                ¿Ya tienes una cuenta? <span><a style="color: #111111 !important; font-weight: bold !important;" href="./login.html">Inicia sesión</a></span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

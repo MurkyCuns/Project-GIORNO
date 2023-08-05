@@ -50,6 +50,21 @@
     flex-direction: column;
 }
 
+#signup-quote-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111111;
+    color: white;
+    font-family: "Frunchy";
+    font-size: 3rem;
+    line-height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .welcome-subtitle {
     font-size: 1.5rem;
     color: gray;
@@ -74,6 +89,28 @@
 }
 
 #login-container > form > button:focus {
+    background-color: #111111 !important;
+    box-shadow: none !important;
+}
+
+#signup-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: #111111;
+    font-family: "Maison Neue Thin";
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-container > form > button {
+    background-color: #111111 !important;
+    border-color: #111111;
+}
+
+#signup-container > form > button:focus {
     background-color: #111111 !important;
     box-shadow: none !important;
 }

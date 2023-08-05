@@ -21,12 +21,130 @@
     color: white;
 }
 
-#workday-begin-container, #workday-end-container {
+#workday-begin-container, #workday-end-container, #workday-registered-container{
     font-family: 'Maison Neue Thin';
     font-size: 3rem;
     color: white;
 }
 
-.workday-begin-text, .workday-end-text {
+.workday-begin-text, .workday-end-text, .workday-registered-text {
     font-size: 1.5rem;
+}
+
+.disabled-button {
+    color: rgb(123, 123, 123) !important;
+}
+
+#welcome-quote-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111111;
+    color: white;
+    font-family: "Frunchy";
+    font-size: 3rem;
+    line-height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25)), url("../images/sandwatch.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#signup-quote-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111111;
+    color: white;
+    font-family: "Frunchy";
+    font-size: 3rem;
+    line-height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome-subtitle {
+    font-size: 1.5rem;
+    color: gray;
+    text-align: right;
+}
+
+#login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #111111;
+    font-family: "Maison Neue Thin";
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-container > form > button {
+    background-color: #111111 !important;
+    border-color: #111111;
+}
+
+#login-container > form > button:focus {
+    background-color: #111111 !important;
+    box-shadow: none !important;
+}
+
+#signup-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: #111111;
+    font-family: "Maison Neue Thin";
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-container > form > button {
+    background-color: #111111 !important;
+    border-color: #111111;
+}
+
+#signup-container > form > button:focus {
+    background-color: #111111 !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #111111;
+    outline: 0;
+    box-shadow: none;
+}
+
+#form-image {
+    padding-bottom: 2.5rem;
+}
+
+#form-title {
+    font-family: "Frunchy";
+    font-size: 3.75rem;
+}
+
+#form-subtitle {
+    font-family: "Frunchy";
+    font-size: 1.75rem;
+    color: gray;
+    margin-top: -1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+#form-footer {
+    padding-top: 5rem;
+    font-size: 1rem;
 }
